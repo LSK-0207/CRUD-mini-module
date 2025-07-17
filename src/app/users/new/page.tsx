@@ -3,7 +3,6 @@
 import { createUser } from "@/lib/actions/actions";
 import { UserInputSchema, userSchema } from "@/lib/validations/validSchema";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { revalidatePath } from "next/cache";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { startTransition, useActionState, useEffect } from "react";
@@ -25,7 +24,6 @@ export default function CreateUserPage() {
 
   useEffect(() => {
     if (state.success) {
-      revalidatePath("/users");
       router.push("/users");
       router.refresh();
     }
