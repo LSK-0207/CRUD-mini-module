@@ -25,6 +25,7 @@ export async function createUser(
 
   try {
     await prisma.user.create({ data });
+    revalidatePath("/users");
     return { success: true, error: false };
   } catch (error) {
     console.log(error);
@@ -69,6 +70,7 @@ export async function updateUser(_: ActionState, formData: FormData) {
       },
       data: parsedData.data,
     });
+    revalidatePath("/users");
 
     return { success: true, error: false };
   } catch (error) {

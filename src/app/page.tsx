@@ -7,7 +7,7 @@ export default function Home() {
         <h1>
           Visit this link for the main app {"-->"}{" "}
           <Link href={"/users"}>
-            <span className="text-blue-500 hover:text-blue-400 hover:underline">
+            <span className="text-blue-500 hover:text-blue-400 hover:underline active:text-red-500">
               /users
             </span>
           </Link>

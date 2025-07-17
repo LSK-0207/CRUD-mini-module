@@ -25,7 +25,6 @@ export default function CreateUserPage() {
   useEffect(() => {
     if (state.success) {
       router.push("/users");
-      router.refresh();
     }
   }, [state, router]);
 
