@@ -25,7 +25,6 @@ export async function createUser(
 
   try {
     await prisma.user.create({ data });
-    revalidatePath("/users");
     return { success: true, error: false };
   } catch (error) {
     console.log(error);
