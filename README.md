@@ -25,6 +25,7 @@ A minimal full-stack boilerplate built with the modern **Next.js App Router**, *
 │       ├── page.tsx               # Listing all users
 │       ├── new/page.tsx           # Create user page (form)
 │       └── [id]/page.tsx          # Update user form
+│   └── page.tsx
 ├── /lib
 │   ├── prisma.ts                  # Singleton Prisma client
 │   └── actions/
