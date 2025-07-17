@@ -1,0 +1,12 @@
+version: "3.8"
+services:
+  postgres:
+    image: postgres:15
+    container_name: devflow_postgres
+    restart: always
+    environment:
+      POSTGRES_USER: ls
+      POSTGRES_PASSWORD: ls@2005
+      POSTGRES_DB: devflow
+    ports:
+      - "5432:5432"
