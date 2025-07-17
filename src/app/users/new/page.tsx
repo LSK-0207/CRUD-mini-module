@@ -27,6 +27,7 @@ export default function CreateUserPage() {
     if (state.success) {
       revalidatePath("/users");
       router.push("/users");
+      router.refresh();
     }
   }, [state, router]);
 
